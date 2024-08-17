@@ -1,21 +1,25 @@
 import { Box, Grid, GridItem, Text } from "@chakra-ui/react";
 import Header from "./components/Header";
-import IntroductionHeader from "./components/IntroductionHeader";
-// import backgroundImage from "./assets/images/background1.jpg";
+import IntroductionText from "./components/IntroductionHeader";
+import backgroundImage from "./assets/images/background1.jpg";
 
 function App() {
   return (
     <Grid
-      templateAreas={`"header" "main" "about" "projects" "resume" "contact" "footer"`}
-      templateRows={"10vh 90vh 6fr 6fr 3fr 3fr 1fr"}
+      templateAreas={`"main" "about" "projects" "resume" "contact" "footer"`}
+      templateRows={"100vh 6fr 6fr 3fr 3fr 1fr"}
     >
-      <GridItem bg="orange.300" area="header">
+      <GridItem
+        bg="blue.300"
+        area="main"
+        bgImage={backgroundImage}
+        bgSize="200vh" //sorta keeps right size?
+        bgPosition="center"
+        overflow="hidden"
+      >
         <Header />
-      </GridItem>
-
-      <GridItem bg="blue.300" area="main">
-        <Box>
-          <IntroductionHeader />
+        <Box pos="absolute" top="30%" left="8%">
+          <IntroductionText />
         </Box>
       </GridItem>
 

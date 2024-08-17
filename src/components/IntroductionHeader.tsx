@@ -1,19 +1,19 @@
 import { Box, Heading } from "@chakra-ui/react";
 
-const IntroductionHeader = () => {
+const IntroductionText = () => {
   return (
     <Box>
-      <Heading as="h4" size="md" color="purple">
+      <Heading as="h3" size="lg" color="purple">
         Hello! my name is
       </Heading>
-      <Heading mt="35px" as="h2" size="3xl" noOfLines={1}>
+      <Heading mt="35px" as="h1" size="4xl">
         Ryan Yan
       </Heading>
-      <Heading mt="20px" as="h3" size="lg" color="teal">
+      <Heading mt="20px" as="h4" size="md" color="teal">
         And Welcome To My Website
       </Heading>
     </Box>
   );
 };
 
-export default IntroductionHeader;
+export default IntroductionText;

@@ -1,4 +1,12 @@
-import { Box, Button, Grid, GridItem, Heading, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Grid,
+  GridItem,
+  Heading,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import Header from "./components/Header";
 import IntroductionText from "./components/IntroductionText";
 import About from "./components/About";
@@ -6,6 +14,7 @@ import ProjectGrid from "./components/ProjectGrid";
 
 import backgroundImageMain from "./assets/images/background1.jpg";
 import backgroundImageSecond from "./assets/images/background2.png";
+import ContactGrid from "./components/ContactGrid";
 
 function App() {
   return (
@@ -54,20 +63,31 @@ function App() {
         bgPosition="center"
         overflow="hidden"
       >
-        <VStack mt="6em" alignSelf="center" >
+        <VStack mt="6em" alignSelf="center">
           <Heading as="h3" size="lg" color="white" textAlign="center">
             Dear Employers: Have You Considered Hiring Me?
           </Heading>
-          <Button mt="25px" colorScheme="teal" color="white" size="lg" borderRadius={25}>
+          <Button
+            mt="25px"
+            colorScheme="teal"
+            color="white"
+            size="lg"
+            borderRadius={25}
+          >
             See My Resume
           </Button>
         </VStack>
       </GridItem>
 
       <GridItem bg="purple.300" area="contact">
-        <Box>
-          <Text>Placeholder</Text>
-        </Box>
+        <VStack>
+          <Heading mt="60px" as="h1" size="4xl" color="aquamarine">
+            Ryan Yan
+          </Heading>
+          <Text color="purple">if you somehow forgot already</Text>
+          <Heading mt="15px" as='h4' size='md'>Check me out below!</Heading>
+          <ContactGrid />
+        </VStack>
       </GridItem>
 
       <GridItem bg="pink.300" area="footer">

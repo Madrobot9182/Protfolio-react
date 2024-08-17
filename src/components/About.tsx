@@ -1,22 +1,32 @@
-import { Box, Heading, HStack, Image, Text } from "@chakra-ui/react";
-import pfp from "../assets/images/profile.jpg"
+import { Box, Button, Heading, HStack, Image, Text } from "@chakra-ui/react";
+import pfp from "../assets/images/profile.jpg";
 
-interface AboutProp {
-  aboutText: string;
-}
 
-const About = ({ aboutText }: AboutProp) => {
+const About = () => {
   return (
-    <HStack>
-        <Image src={pfp} alt="profile picture" />
-        <Box>
-            <Heading >About Me</Heading>
-            <Heading >About Me</Heading>
-            <Text>Yapyapyaop</Text>
-        </Box>
+    <HStack padding={20} spacing={16} justifyContent="center">
+      <Image boxSize="25em" src={pfp} alt="profile picture" />
+      <Box>
+        <Heading mb='10px' as="h1" size="4xl" noOfLines={1}>
+          About Me
+        </Heading>
+        <Heading mb='20px' as="h3" size="lg">
+          Computer Science and AI Enthusiastic
+        </Heading>
+        <Text fontSize={20}>
+          Passionate, creative, and always eager to take on new challenges, I
+          thrive in environments where innovation is the standard. With a
+          natural curiosity for learning, I'm constantly seeking out
+          opportunities to expand my skillset, expanding my comfort zone.
+          Whether it's exploring the latest technologies, developing my own
+          solutions, or collaborating with others to produce something greater,
+          I'm always looking for ways to grow both personally and
+          professionally.
+        </Text>
+        <Button>Placeholder</Button>
+      </Box>
     </HStack>
-
-  )
+  );
 };
 
 export default About;

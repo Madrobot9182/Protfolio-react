@@ -3,7 +3,9 @@ import Header from "./components/Header";
 import IntroductionText from "./components/IntroductionHeader";
 import backgroundImage from "./assets/images/background1.jpg";
 import About from "./components/About";
-import AboutText from "./assets/texts/about.txt"
+import AboutTextRaw from "./assets/texts/about.txt"
+
+
 
 function App() {
   return (
@@ -26,7 +28,7 @@ function App() {
       </GridItem>
 
       <GridItem bg="red.300" area="about">
-        <About aboutText={AboutText}/>
+        <About/>
       </GridItem>
 
       <GridItem bg="green.300" area="projects">

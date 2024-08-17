@@ -1,9 +1,8 @@
 import { Box, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
 import Header from "./components/Header";
-import IntroductionText from "./components/IntroductionHeader";
+import IntroductionText from "./components/IntroductionText";
 import backgroundImage from "./assets/images/background1.jpg";
 import About from "./components/About";
-import AboutTextRaw from "./assets/texts/about.txt";
 import ProjectGrid from "./components/ProjectGrid";
 
 function App() {
@@ -32,7 +31,7 @@ function App() {
 
       <GridItem bg="green.300" area="projects">
         <Box padding={10}>
-          <Heading as="h1" size="4xl" noOfLines={1} textAlign="center">
+          <Heading mb="10px" as="h1" size="4xl" noOfLines={1} textAlign="center">
             My Projects
           </Heading>
           <ProjectGrid />

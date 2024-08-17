@@ -6,24 +6,32 @@ import {
   CardFooter,
   Button,
   Text,
-} from "@chakra-ui/react";
+  Icon,
 
-const ProjectCard = () => {
+} from "@chakra-ui/react";
+import { IconType } from "react-icons";
+interface ProjectCardProp {
+    icon:IconType;
+    heading:string;
+    content:string;
+}
+
+const ProjectCard = ( {icon, heading, content}: ProjectCardProp) => {
   return (
     <Card borderRadius={20}>
-      <CardHeader>
-        <Heading size="md"> Heading</Heading>
+      <CardHeader alignItems='right'>
+        <Icon as={icon} boxSize={12} pos="relative" left="40%" color="aquamarine" />
+        <Heading size="lg">  {heading}</Heading>
       </CardHeader>
       <CardBody>
         <Text>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia
-          rem molestias iste delectus reprehenderit, sapiente saepe earum
-          tenetur incidunt natus ratione quos necessitatibus itaque totam
-          dolores. Sit animi tenetur veritatis harum architecto, molestiae odio.
+          {content}
         </Text>
       </CardBody>
       <CardFooter>
-        <Button>Read More</Button>
+      <Button colorScheme="teal" color="white" size="md" borderRadius={25}>
+        Read More
+        </Button>
       </CardFooter>
     </Card>
   );

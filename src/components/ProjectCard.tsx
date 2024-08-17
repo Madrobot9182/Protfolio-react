@@ -20,7 +20,7 @@ const ProjectCard = ( {icon, heading, content}: ProjectCardProp) => {
   return (
     <Card borderRadius={20}>
       <CardHeader alignItems='right'>
-        <Icon as={icon} boxSize={12} pos="relative" left="40%" color="aquamarine" />
+        <Icon mb="15px" as={icon} boxSize={12} pos="relative" left="40%" color="aquamarine" />
         <Heading size="lg">  {heading}</Heading>
       </CardHeader>
       <CardBody>

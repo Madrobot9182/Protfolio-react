@@ -20,10 +20,9 @@ function App() {
   return (
     <Grid
       templateAreas={`"main" "about" "projects" "resume" "contact" "footer"`}
-      templateRows={"100vh 6fr 6fr 3fr 3fr 1fr"}
+      templateRows={"100vh 6fr 6fr 3fr 3fr 0.25fr"}
     >
       <GridItem
-        bg="blue.300"
         area="main"
         bgImage={backgroundImageMain}
         bgSize="200vh" //sorta keeps right size?
@@ -36,11 +35,11 @@ function App() {
         </Box>
       </GridItem>
 
-      <GridItem bg="red.300" area="about">
+      <GridItem bg="gray.700" area="about">
         <About />
       </GridItem>
 
-      <GridItem bg="green.300" area="projects">
+      <GridItem bg="gray.900" area="projects">
         <Box padding={10}>
           <Heading
             mb="10px"
@@ -79,21 +78,19 @@ function App() {
         </VStack>
       </GridItem>
 
-      <GridItem bg="purple.300" area="contact">
+      <GridItem bg="gray.700" area="contact">
         <VStack>
-          <Heading mt="60px" as="h1" size="4xl" color="aquamarine">
+          <Heading mt="60px" as='h2' size='3xl' color="aquamarine" noOfLines={1}>
             Ryan Yan
           </Heading>
           <Text color="purple">if you somehow forgot already</Text>
-          <Heading mt="15px" as='h4' size='md'>Check me out below!</Heading>
+          <Heading mt="15px" as='h3' size='lg'>Check me out below!</Heading>
           <ContactGrid />
         </VStack>
       </GridItem>
 
-      <GridItem bg="pink.300" area="footer">
-        <Box>
-          <Text>Placeholder</Text>
-        </Box>
+      <GridItem bg="gray.600" area="footer">
+        <Text mt="3px" fontSize={14} pl="8px">Copyright by Ryan Yan. Fonts provided by cdnjs.com. Symbols provided by fontawesome.com. Various images sourced from pexels.com and generated using Stable DIffusion V2</Text>
       </GridItem>
     </Grid>
   );

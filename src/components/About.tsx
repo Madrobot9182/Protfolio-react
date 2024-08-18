@@ -15,13 +15,12 @@ const About = () => {
         </Heading>
         <Text fontSize={20}>
           Passionate, creative, and always eager to take on new challenges, I
-          thrive in environments where innovation is the standard. With a
-          natural curiosity for learning, I'm constantly seeking out
-          opportunities to expand my skillset, expanding my comfort zone.
-          Whether it's exploring the latest technologies, developing my own
-          solutions, or collaborating with others to produce something greater,
-          I'm always looking for ways to grow both personally and
-          professionally.
+          thrive in an environment where innovation flourishs. With a natural
+          curiosity for learning, I'm constantly seeking out opportunities to
+          expand my knowledge and skills. Whether it's exploring the latest
+          technologies, developing my own solutions, or collaborating with
+          others to produce something great, I'm always looking for ways to grow
+          both personally and professionally.
         </Text>
         <Button mt="25px" colorScheme="teal" size="lg" borderRadius={25}>
           Check Me Out <FaArrowTurnDown />

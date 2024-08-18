@@ -1,7 +1,6 @@
-import { SimpleGrid } from "@chakra-ui/react";
 import ProjectCard from "./ProjectCard";
-
-import { FaBrain, FaLinux, FaComputer } from "react-icons/fa6";
+import { SimpleGrid } from "@chakra-ui/react";
+import { FaBrain, FaLinux, FaComputer, FaReact } from "react-icons/fa6";
 
 const ProjectGrid = () => {
   const cardData = [
@@ -9,23 +8,29 @@ const ProjectGrid = () => {
       icon: FaBrain,
       heading: "Artificial Intelligence",
       content:
-        "From training/running models, studying under the best AI program in the world (UofA), see some of my cool ass projects 😄",
-    },
-    {
-      icon: FaLinux,
-      heading: "Freelance Developer",
-      content:
-        "Just like building this website, I love to just try any new computer things. The internet and all its wonders, like FOSS, lets me do just that! ",
+        "From training/running my own models, to studying under one of the best AI program in the world (University of Alberta), I've done some cool things while admiring the even cooler things that peole have done 😄",
     },
     {
       icon: FaComputer,
+      heading: "Freelance Developer",
+      content:
+        "Just like this website, I love to just learn new things. Thanks to the endless source of info from the Internet, I can unlock my full potential from the comfort of my own house!",
+    },
+    {
+      icon: FaLinux,
       heading: "GNU/Linux",
       content:
-        "From the console I call home, to all the unique softwares on the internet, this is my multi-year long experiment learning Arch Linux from scratch",
+        "From the console I call home, to all the unique softwares on the internet, this is my multi-year long experiment learning Arch Linux and falling in love with open source development!",
+    },
+    {
+      icon: FaReact,
+      heading: "React Webdev",
+      content:
+        "In just a few weeks, I went from zero experience with web development to deploying my own React websites with all the libraries and neat tricks.In fact, this site was rewritten from scratch with ChakraUI",
     },
   ];
   return (
-    <SimpleGrid columns={{ md: 1, lg: 3 }} padding={5} spacing={8}>
+    <SimpleGrid columns={{ sm: 1, md: 2, lg: 4 }} padding={5} spacing={8}>
       {cardData.map((data) => (
         <ProjectCard {...data} />
       ))}

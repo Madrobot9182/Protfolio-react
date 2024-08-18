@@ -3,7 +3,7 @@ import { Box, Heading } from "@chakra-ui/react";
 const IntroductionText = () => {
   return (
     <Box>
-      <Heading as="h3" size="lg" color="purple">
+      <Heading as="h3" size="lg" color="pink.600">
         Hello! my name is
       </Heading>
       <Heading mt="35px" as="h1" size="4xl">

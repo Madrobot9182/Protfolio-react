@@ -4,8 +4,8 @@ import { AiFillAlert } from "react-icons/ai";
 const Logo = () => {
   return (
     <HStack>
-      <Text fontSize="4xl">A Port</Text>
-      <Text fontSize="4xl" color="teal">
+      <Text fontWeight="bold" fontSize="4xl" color="white">A Port</Text>
+      <Text fontWeight="bold" fontSize="4xl" color="aquamarine">
         folio
       </Text>
       <Icon as={AiFillAlert} />

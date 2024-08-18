@@ -7,10 +7,10 @@ const About = () => {
     <HStack padding={20} spacing={16} justifyContent="center">
       <Image boxSize="25em" src={pfp} alt="profile picture" />
       <Box>
-        <Heading mb="10px" as="h1" size="4xl" noOfLines={1}>
+        <Heading mb="10px" as="h1" size="4xl" noOfLines={1} color="aquamarine">
           About Me
         </Heading>
-        <Heading mb="20px" as="h3" size="lg">
+        <Heading mb="20px" as="h3" size="lg" color="pink.600">
           Computer Science and AI Enthusiastic
         </Heading>
         <Text fontSize={20}>

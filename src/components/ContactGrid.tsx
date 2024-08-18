@@ -1,4 +1,4 @@
-import { Button, Circle, HStack, Icon, Link } from "@chakra-ui/react";
+import { Button, HStack, Icon, Link } from "@chakra-ui/react";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";

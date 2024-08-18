@@ -25,7 +25,7 @@ function App() {
       <GridItem
         area="main"
         bgImage={backgroundImageMain}
-        bgSize="200vh" //sorta keeps right size?
+        bgSize="cover"
         bgPosition="center"
         overflow="hidden"
       >
@@ -55,10 +55,9 @@ function App() {
       </GridItem>
 
       <GridItem
-        //bg="yellow.300"
         area="resume"
         bgImage={backgroundImageSecond}
-        bgSize="200vh" //sorta keeps right size?
+        bgSize="cover"
         bgPosition="center"
         overflow="hidden"
       >
@@ -69,7 +68,6 @@ function App() {
           <Button
             mt="25px"
             colorScheme="teal"
-            color="white"
             size="lg"
             borderRadius={25}
           >
@@ -83,7 +81,7 @@ function App() {
           <Heading mt="60px" as='h2' size='3xl' color="aquamarine" noOfLines={1}>
             Ryan Yan
           </Heading>
-          <Text color="purple">if you somehow forgot already</Text>
+          <Text color="pink.600">if you somehow already forgot</Text>
           <Heading mt="15px" as='h3' size='lg'>Check me out below!</Heading>
           <ContactGrid />
         </VStack>

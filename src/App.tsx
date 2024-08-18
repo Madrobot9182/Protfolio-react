@@ -6,15 +6,17 @@ import {
   Heading,
   Text,
   VStack,
+  Link,
 } from "@chakra-ui/react";
 import Header from "./components/Header";
 import IntroductionText from "./components/IntroductionText";
 import About from "./components/About";
 import ProjectGrid from "./components/ProjectGrid";
+import ContactGrid from "./components/ContactGrid";
 
 import backgroundImageMain from "./assets/images/background1.jpg";
 import backgroundImageSecond from "./assets/images/background2.png";
-import ContactGrid from "./components/ContactGrid";
+import resumePath from "./assets/resume/Ryan_AI_Resume.pdf"
 
 function App() {
   return (
@@ -65,6 +67,7 @@ function App() {
           <Heading as="h3" size="lg" color="white" textAlign="center">
             Dear Employers: Have You Considered Hiring Me?
           </Heading>
+        <Link href={resumePath}>
           <Button
             mt="25px"
             colorScheme="teal"
@@ -73,22 +76,23 @@ function App() {
           >
             See My Resume
           </Button>
+        </Link>
         </VStack>
       </GridItem>
 
-      <GridItem bg="gray.700" area="contact">
+      <GridItem bg="gray.800" area="contact">
         <VStack>
-          <Heading mt="60px" as='h2' size='3xl' color="aquamarine" noOfLines={1}>
+          <Heading mt="90px" as='h2' size='3xl' color="aquamarine" noOfLines={1}>
             Ryan Yan
           </Heading>
           <Text color="pink.600">if you somehow already forgot</Text>
-          <Heading mt="15px" as='h3' size='lg'>Check me out below!</Heading>
+          <Heading mt="15px" mb='15px' as='h4' size='md'>Check me out below!</Heading>
           <ContactGrid />
         </VStack>
       </GridItem>
 
-      <GridItem bg="gray.600" area="footer">
-        <Text mt="3px" fontSize={14} pl="8px">Copyright by Ryan Yan. Fonts provided by cdnjs.com. Symbols provided by fontawesome.com. Various images sourced from pexels.com and generated using Stable DIffusion V2</Text>
+      <GridItem bg="gray.800" area="footer">
+        <Text mt="3px" fontSize={14} align="center">Copyright by Ryan Yan. Fonts provided by cdnjs.com. Symbols provided by fontawesome.com. Various images sourced from pexels.com and generated using Stable DIffusion V2</Text>
       </GridItem>
     </Grid>
   );

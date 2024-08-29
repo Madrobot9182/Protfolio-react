@@ -7,8 +7,11 @@ import {
   Button,
   Text,
   Icon,
+  Link,
 } from "@chakra-ui/react";
+import { Link as ReactRouterLink } from 'react-router-dom'
 import { IconType } from "react-icons";
+
 interface ProjectCardProp {
   icon: IconType;
   heading: string;
@@ -33,9 +36,11 @@ const ProjectCard = ({ icon, heading, content }: ProjectCardProp) => {
         <Text>{content}</Text>
       </CardBody>
       <CardFooter>
+        <Link as={ReactRouterLink} to='/todo'>
         <Button colorScheme="teal" size="md" borderRadius={25}>
           Read More
         </Button>
+        </Link>
       </CardFooter>
     </Card>
   );

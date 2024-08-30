@@ -14,7 +14,7 @@ const Header = () => {
     ["Contact Me", "contact"],
   ];
   return (
-    <HStack mt={8} spacing={16} justifyContent="center">
+    <HStack mt={8} ml={200} mr={200} justifyContent="space-between">
       <Logo />
       <Breadcrumb separator={<BiChevronRight />}>
         {options.map((option) => (

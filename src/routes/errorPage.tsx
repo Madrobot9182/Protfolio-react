@@ -1,3 +1,4 @@
+import { Box, Heading, Text, VStack } from "@chakra-ui/react";
 import { useRouteError } from "react-router-dom";
 
 export default function ErrorPage() {
@@ -5,12 +6,16 @@ export default function ErrorPage() {
   console.error(error);
 
   return (
-    <div id="error-page">
-      <h1>Oops!</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
-      <p>
-        <i>{error.statusText || error.message}</i>
-      </p>
-    </div>
+    <Box position="fixed" height="100%" width="100%" alignContent="center">
+      <VStack alignSelf="center" spacing="4em">
+        <Heading as="h1" size="4xl">
+          Oops!
+        </Heading>
+        <Text>
+          Sorry, an unexpected error has occured. (Unless you did this on purpose)
+        </Text>
+        <Text>{error.statusText || error.message}</Text>
+      </VStack>
+    </Box>
   );
 }

@@ -26,6 +26,7 @@ function Root() {
     >
       <GridItem
         area="main"
+        id="main"
         bgImage={backgroundImageMain}
         bgSize="cover"
         bgPosition="center"
@@ -37,11 +38,11 @@ function Root() {
         </Box>
       </GridItem>
 
-      <GridItem bg="gray.700" area="about">
+      <GridItem bg="gray.700" area="about" id="about">
         <About />
       </GridItem>
 
-      <GridItem bg="gray.900" area="projects">
+      <GridItem bg="gray.900" area="projects" id="projects">
         <Box padding={10}>
           <Heading
             mb="10px"
@@ -58,6 +59,7 @@ function Root() {
 
       <GridItem
         area="resume"
+        id="resume"
         bgImage={backgroundImageSecond}
         bgSize="cover"
         bgPosition="center"
@@ -75,7 +77,7 @@ function Root() {
         </VStack>
       </GridItem>
 
-      <GridItem bg="gray.800" area="contact">
+      <GridItem bg="gray.800" area="contact" id="contact">
         <VStack>
           <Heading
             mt="90px"

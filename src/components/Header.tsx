@@ -1,19 +1,30 @@
-import { Box, Button, HStack, Link } from "@chakra-ui/react";
+import { Button, HStack, Link } from "@chakra-ui/react";
+import { Link as Routerlink } from "react-router-dom";
 import Logo from "./Logo";
 
-const Header = () => {
-  const options = ["Home", "About Me", "Projects", "Resume", "Contact Me"];
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
+import { BiChevronRight } from "react-icons/bi";
 
+const Header = () => {
+  const options = [
+    ["Home", "main"],
+    ["About Me", "about"],
+    ["Projects", "projects"],
+    ["Resume", "resume"],
+    ["Contact Me", "contact"],
+  ];
   return (
     <HStack mt={8} spacing={16} justifyContent="center">
       <Logo />
-      <Box>
+      <Breadcrumb separator={<BiChevronRight />}>
         {options.map((option) => (
-          <Button colorScheme="white" variant="ghost">
-            {option}
-          </Button>
+          <BreadcrumbItem color="white" fontSize="18px" isCurrentPage>
+            <BreadcrumbLink as={Routerlink} to={"#" + option[1]}>
+              {option[0]}
+            </BreadcrumbLink>
+          </BreadcrumbItem>
         ))}
-      </Box>
+      </Breadcrumb>
 
       <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" isExternal>
         <Button colorScheme="teal" variant="solid" borderRadius={20}>

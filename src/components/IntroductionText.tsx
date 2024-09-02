@@ -1,4 +1,4 @@
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Heading, Link } from "@chakra-ui/react";
 
 const IntroductionText = () => {
   return (
@@ -12,6 +12,12 @@ const IntroductionText = () => {
       <Heading mt="20px" as="h4" size="md" color="aquamarine">
         And Welcome To My Website
       </Heading>
+
+      <Link href="https://react-game-hub-dusky.vercel.app/">
+        <Heading mt="60px" as="h4" size="md" color="white">
+          Check Out My Other Project Here!
+        </Heading>
+      </Link>
     </Box>
   );
 };

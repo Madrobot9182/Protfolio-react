@@ -9,16 +9,24 @@ import {
   Icon,
   Link,
 } from "@chakra-ui/react";
-import { Link as ReactRouterLink } from 'react-router-dom'
+import { Link as ReactRouterLink } from "react-router-dom";
 import { IconType } from "react-icons";
 
 interface ProjectCardProp {
   icon: IconType;
   heading: string;
   content: string;
+  buttonLabel: string;
+  linkTo: string;
 }
 
-const ProjectCard = ({ icon, heading, content }: ProjectCardProp) => {
+const ProjectCard = ({
+  icon,
+  heading,
+  content,
+  buttonLabel,
+  linkTo,
+}: ProjectCardProp) => {
   return (
     <Card borderRadius={20}>
       <CardHeader alignItems="right">
@@ -30,16 +38,18 @@ const ProjectCard = ({ icon, heading, content }: ProjectCardProp) => {
           left="40%"
           color="aquamarine"
         />
-        <Heading size="lg" color="pink.600">{heading}</Heading>
+        <Heading size="lg" color="pink.600">
+          {heading}
+        </Heading>
       </CardHeader>
       <CardBody>
         <Text>{content}</Text>
       </CardBody>
       <CardFooter>
-        <Link as={ReactRouterLink} to='/todo'>
-        <Button colorScheme="teal" size="md" borderRadius={25}>
-          Read More
-        </Button>
+        <Link as={ReactRouterLink} to={linkTo}>
+          <Button colorScheme="teal" size="md" borderRadius={25}>
+            {buttonLabel}
+          </Button>
         </Link>
       </CardFooter>
     </Card>

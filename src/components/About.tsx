@@ -1,12 +1,20 @@
-import { Box, Button, Heading, HStack, Image, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Heading,
+  HStack,
+  Image,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import { FaArrowTurnDown } from "react-icons/fa6";
 import pfp from "../assets/images/profile.jpg";
 
 const About = () => {
   return (
-    <HStack padding={20} spacing={16} justifyContent="center">
+    <HStack mt={20} spacing={16} justifyContent="center">
       <Image boxSize="25em" src={pfp} alt="profile picture" />
-      <Box>
+      <VStack maxW="60%" alignItems="left">
         <Heading mb="10px" as="h1" size="4xl" noOfLines={1} color="aquamarine">
           About Me
         </Heading>
@@ -22,10 +30,10 @@ const About = () => {
           others to produce something great, I'm always looking for ways to grow
           both personally and professionally.
         </Text>
-        <Button mt="25px" colorScheme="teal" size="lg" borderRadius={25}>
+        <Button mt="25px" colorScheme="teal" size="lg" borderRadius={25} w="fit-content">
           Check Me Out <FaArrowTurnDown />
         </Button>
-      </Box>
+      </VStack>
     </HStack>
   );
 };

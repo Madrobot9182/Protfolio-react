@@ -46,11 +46,13 @@ const ProjectCard = ({
         <Text>{content}</Text>
       </CardBody>
       <CardFooter>
-        <Link as={ReactRouterLink} to={linkTo}>
-          <Button colorScheme="teal" size="md" borderRadius={25}>
-            {buttonLabel}
-          </Button>
-        </Link>
+        {linkTo != "/todo" && (
+          <Link as={ReactRouterLink} to={linkTo}>
+            <Button colorScheme="teal" size="md" borderRadius={25}>
+              {buttonLabel}
+            </Button>
+          </Link>
+        )}
       </CardFooter>
     </Card>
   );

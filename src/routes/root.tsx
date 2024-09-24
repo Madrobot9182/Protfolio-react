@@ -45,7 +45,7 @@ function Root() {
         </Box>
       </GridItem>
 
-      <GridItem bg="gray.700" area="about" id="about" pt="2em">
+      <GridItem bg="gray.700" area="about" id="about" mt="2em" mb="2em">
         <About />
       </GridItem>
 

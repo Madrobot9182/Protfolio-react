@@ -21,8 +21,8 @@ import resumePath from "../assets/resume/Ryan_AI_Resume.pdf";
 function Root() {
   return (
     <Grid
-      templateAreas={`"main" "about" "projects" "resume" "contact" "footer"`}
-      templateRows={"100vh 6fr 6fr 3fr 3fr 0.25fr"}
+      templateAreas={{base:`"main" "about" "projects" "resume" "contact" "footer"` ,lg:`"main" "about" "projects" "resume" "contact" "footer"`}}
+      templateRows={{base:"100vh", lg:"100vh 6fr 6fr 3fr 3fr 0.25fr"}}
     >
       <GridItem
         area="main"

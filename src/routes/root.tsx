@@ -7,6 +7,7 @@ import {
   Text,
   VStack,
   Link,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import Header from "../components/Header";
 import IntroductionText from "../components/IntroductionText";
@@ -19,11 +20,14 @@ import backgroundImageSecond from "../assets/images/background2.png";
 import resumePath from "../assets/resume/Ryan_AI_Resume.pdf";
 
 function Root() {
+  const [isMobile] = useMediaQuery("(max-width: 48em)");
+
   return (
     <Grid
-      templateAreas={{base:`"main" "about" "projects" "resume" "contact" "footer"` ,lg:`"main" "about" "projects" "resume" "contact" "footer"`}}
+      templateAreas={{base:`"main" "about" "projects" "resume" "contact" "footer"`, lg:`"main" "about" "projects" "resume" "contact" "footer"`}}
       templateRows={{base:"100vh 100% 100% 30vh", lg:"100vh 6fr 6fr 3fr 3fr 0.25fr"}}
     >
+      
       <GridItem
         area="main"
         id="main"
@@ -32,7 +36,10 @@ function Root() {
         bgPosition="center"
         overflow="hidden"
       >
+        {!isMobile && (
         <Header />
+      )}
+        
         <Box pos="relative" top="30%" left="8%">
           <IntroductionText />
         </Box>

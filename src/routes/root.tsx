@@ -17,7 +17,7 @@ import ContactGrid from "../components/ContactGrid";
 
 import backgroundImageMain from "../assets/images/background1.jpg";
 import backgroundImageSecond from "../assets/images/background2.png";
-import resumePath from "../assets/resume/Ryan_AI_Resume.pdf";
+import Resume from "../components/Resume";
 
 function Root() {
   const [isMobile] = useMediaQuery("(max-width: 48em)");
@@ -25,7 +25,7 @@ function Root() {
   return (
     <Grid
       templateAreas={{base:`"main" "about" "projects" "resume" "contact" "footer"`, lg:`"main" "about" "projects" "resume" "contact" "footer"`}}
-      templateRows={{base:"100vh 100% 100% 30vh", lg:"100vh 6fr 6fr 3fr 3fr 0.25fr"}}
+      templateRows={{base:"100vh", lg:"100vh"}}
     >
       
       <GridItem
@@ -45,7 +45,7 @@ function Root() {
         </Box>
       </GridItem>
 
-      <GridItem bg="gray.700" area="about" id="about">
+      <GridItem bg="gray.700" area="about" id="about" pt="2em">
         <About />
       </GridItem>
 
@@ -54,7 +54,7 @@ function Root() {
           <Heading
             mb="10px"
             as="h1"
-            size="4xl"
+            size={{base: "3xl", lg: "4xl"}}
             noOfLines={1}
             textAlign="center"
           >
@@ -67,27 +67,18 @@ function Root() {
       <GridItem
         area="resume"
         id="resume"
+        p="3em"
         bgImage={backgroundImageSecond}
         bgSize="cover"
         bgPosition="center"
         overflow="hidden"
       >
-        <VStack mt="6em" alignSelf="center">
-          <Heading as="h3" size="lg" color="white" textAlign="center">
-            Dear Employers: Have You Considered Hiring Me?
-          </Heading>
-          <Link href={resumePath}>
-            <Button mt="25px" colorScheme="teal" size="lg" borderRadius={25}>
-              See My Resume
-            </Button>
-          </Link>
-        </VStack>
+        <Resume />
       </GridItem>
 
-      <GridItem bg="gray.800" area="contact" id="contact">
+      <GridItem bg="gray.800" area="contact" id="contact" mt="3em">
         <VStack>
           <Heading
-            mt="90px"
             as="h2"
             size="3xl"
             color="aquamarine"
@@ -104,7 +95,7 @@ function Root() {
       </GridItem>
 
       <GridItem bg="gray.800" area="footer">
-        <Text mt="3px" fontSize={14} align="center">
+        <Text mt="2em" fontSize={14} align="center">
           Copyright by Ryan Yan. Fonts provided by cdnjs.com. Symbols provided
           by fontawesome.com. Various images sourced from pexels.com and
           generated using Stable DIffusion V2

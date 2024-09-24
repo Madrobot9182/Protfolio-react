@@ -22,7 +22,7 @@ function Root() {
   return (
     <Grid
       templateAreas={{base:`"main" "about" "projects" "resume" "contact" "footer"` ,lg:`"main" "about" "projects" "resume" "contact" "footer"`}}
-      templateRows={{base:"100vh", lg:"100vh 6fr 6fr 3fr 3fr 0.25fr"}}
+      templateRows={{base:"100vh 100% 100% 30vh", lg:"100vh 6fr 6fr 3fr 3fr 0.25fr"}}
     >
       <GridItem
         area="main"

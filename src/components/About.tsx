@@ -3,7 +3,6 @@ import {
   Grid,
   GridItem,
   Heading,
-  HStack,
   Image,
   Text,
   VStack,
@@ -15,14 +14,14 @@ const About = () => {
   return (
     <Grid
     templateAreas={{base:`"image image" "text text"`, lg:`"image text" "image text"`}}
-    templateRows={{base:"200px", lg:"6fr 6fr"}}
-    templateColumns={{lg:"6fc 6fc"}}
+    //templateRows={{base:"100%", lg:"6fr 6fr"}}
+    //templateColumns={{lg:"3fr"}}
   >
-      <GridItem area="image" id="image" mt="3em" justifyContent="center">
-        <Image boxSize="sm" src={pfp} alt="profile picture"/>
+      <GridItem area="image" id="image" m="1em" display="flex" justifyContent="center">
+        <Image maxBlockSize="sm" src={pfp} alt="profile picture"/>
       </GridItem>
-      <GridItem area="text" id="text" mt="3em" justifyContent="center" p="1em">
-        <VStack  alignItems="left">
+      <GridItem area="text" id="text"justifyContent="center" p="1.5em">
+        <VStack alignItems="left">
           <Heading mb="10px" as="h1" size="4xl" noOfLines={1} color="aquamarine">
             About Me
           </Heading>
@@ -38,7 +37,7 @@ const About = () => {
             others to produce something great, I'm always looking for ways to grow
             both personally and professionally.
           </Text>
-          <Button mt="25px" colorScheme="teal" size="lg" borderRadius={25} w="fit-content">
+          <Button mt="1em" mb="1em" colorScheme="teal" size="lg" borderRadius={25} w="fit-content">
             Check Me Out <FaArrowTurnDown />
           </Button>
         </VStack>
